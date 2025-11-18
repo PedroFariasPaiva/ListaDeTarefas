@@ -1,0 +1,15 @@
+1. por que simulamos requisição?
+
+ R: pra controlar o comportamento de páginas assíncronas e simular timeouts (tempo esgotado) de networks, como quando há uma falha na API ou então para prevenir o bloqueio das threads principais.
+
+2. ciclo de vida do useEffect
+
+o useEffect serve para executar efeitos colaterais em componentes funcionais, para tarefas que acontecem após a renderização do componente, como para buscar dados de uma API, interação com o DOM ou configurar assinaturas. 
+
+3. por que não se pode filtrar diretamente no estado principal?
+
+porque o estado principal deve guardar a fonte de verdade (os dados originais), e não a versão transformada dos dados. quando se faz isso, você perde os dados originais, estados derivados acabam por ter problemas porque eles não foram criados para serem persistidos, e também pelo fato de existir risco de loops infinitos e renders desnecessários.
+
+4. o que são estados derivados?
+
+são valores que são calculados a partir de outros estados ou propriedades existentes em um componente, em vez de serem armazenados diretamente.
